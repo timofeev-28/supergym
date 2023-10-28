@@ -18,8 +18,14 @@
   }
 }
 
+// @mixin active {
+//   &.focus-visible:active {
+//     @content;
+//   }
+// }
+
 @mixin active {
-  &.focus-visible:active {
+  &:active:not(.focus-visible) {
     @content;
   }
 }

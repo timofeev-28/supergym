@@ -13,26 +13,40 @@
     <link rel="preload" href="fonts/alumni-sans-600.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/alumni-sans-800.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon.png">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="container header__container">
-          <div class="header__logo">
+          <a class="header__logo-link" aria-current="page">
             <picture>
               <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg">
               <source media="(max-width: 1365px)" srcset="img/svg/logo-tablet.svg">
-              <img src="img/svg/logo-desktop.svg" alt="">
+              <img src="img/svg/logo-desktop.svg" width="119" height="20" alt="Логотип фитнес центра Supergym">
             </picture>
-          </div>
+          </a>
           <a class="header__link" href="tel:88005555555">8-800-555-55-55</a>
         </div>
       </header>
       <main>
         <section class="hero">
-          <div class="container">
-            <h1 class="hero__title"><span class="hero__title-span">Омск</span>Фитнес Центр</h1>
+          <div class="container hero__container">
+            <ul class="hero__list">
+              <li class="hero__item">Тренажёрный&nbsp;зал</li>
+              <li class="hero__item">Групповые&nbsp;занятия</li>
+              <li class="hero__item">Кардио-зона</li>
+            </ul>
+            <h1 class="hero__title"><span class="hero__title-span title title--white">Омск</span> Фитнес Центр</h1>
+            <a class="hero__link btn btn--white-border" href="#price">Купить абонемент</a>
+            <div class="hero__image">
+              <picture>
+                <source type="image/webp" media="(max-width: 1365px)" srcset="img/hero-tablet@1x.webp 1x, img/hero-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x">
+                <source media="(max-width: 1365px)" srcset="img/hero-tablet@1x.jpg 1x, img/hero-tablet@2x.jpg 2x">
+                <img src="img/hero-desktop@1x.jpg" srcset="img/hero-desktop@2x.jpg 2x" width="500" height="524" alt="Мужчина красивого спортивного телосложения в футболке">
+              </picture>
+            </div>
           </div>
         </section>
       </main>

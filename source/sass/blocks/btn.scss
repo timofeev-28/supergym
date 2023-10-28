@@ -1,14 +1,42 @@
 .btn {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background-color: $color-transparent;
   cursor: pointer;
+  transition: color $trans-default, background-color $trans-default;
 
-  transition: opacity $trans-default;
+  &--white-border {
+    width: 230px;
+    min-height: 66px;
+    color: $color-default-white;
+    border: 2px solid $color-default-white;
+
+    @include vp-1366 {
+      width: 185px;
+      min-height: 56px;
+    }
+
+    @include vp-768 {
+      width: 290px;
+      min-height: 56px;
+    }
+
+    @include hover-focus {
+      color: $color-accent-btn;
+      background-color: $color-default-white;
+    }
+
+    @include active {
+      color: $color-text;
+    }
+  }
 
   &--red {
     background-color: $color-torch-red;
@@ -16,11 +44,7 @@
 
   &:disabled {
     opacity: 0.5;
-
+    cursor: not-allowed;
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }
