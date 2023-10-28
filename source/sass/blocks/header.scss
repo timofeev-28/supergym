@@ -4,6 +4,10 @@
   left: 0;
   padding-block: 30px;
   width: 100%;
+
+  @include vp-768 {
+    padding-block: 15px;
+  }
 }
 
 .header__container {

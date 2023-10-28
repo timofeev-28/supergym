@@ -17,3 +17,13 @@
     height: 17px;
   }
 }
+
+.intro a {
+  font-size: 17px;
+  font-weight: 400;
+  transition: color $tf-default;
+
+  @include hover-focus {
+    color: $color-neon-blue;
+  }
+}
