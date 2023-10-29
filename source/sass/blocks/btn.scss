@@ -12,6 +12,14 @@
   cursor: pointer;
   transition: color $trans-default, background-color $trans-default;
 
+  @include vp-1366 {
+    font-weight: 400;
+  }
+
+  @include vp-768 {
+    font-weight: 700;
+  }
+
   &--white-border {
     width: 230px;
     min-height: 66px;
