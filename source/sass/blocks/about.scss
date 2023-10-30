@@ -214,8 +214,83 @@
 
 .about__wrap iframe {
   display: none;
+  position: absolute;
+  top: 294px;
+  left: 437px;
+  width: 364px;
+  height: 228px;
+
+  @include vp-1366 {
+    top: auto;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 265px;
+    height: 167px;
+  }
+
+  @include vp-768 {
+    width: 320px;
+    height: 167px;
+  }
 }
 
 .about__wrap button {
-  display: none;
+  position: absolute;
+  right: 43.5%;
+  bottom: 78px;
+  padding: 0;
+  width: 72px;
+  height: 72px;
+  background: $red-to-blue;
+  border-radius: 50%;
+  border: none;
+  outline: 2px solid $color-btn-outline;
+  outline-offset: 12px;
+  cursor: pointer;
+  transition: background-color $trans-default, outline-color $trans-default;
+
+  @include vp-1366 {
+    right: 50%;
+    bottom: 59px;
+    transform: translateX(50%);
+    width: 51px;
+    height: 51px;
+    outline-offset: 8px;
+  }
+
+  @include hover-focus {
+    background: $color-default-white;
+    outline-color: $color-text;
+
+    &:hover:not(.focus-visible) svg {
+      color: $color-text;
+    }
+  }
+
+  @include active {
+    background: $color-default-white;
+    outline-color: $color-text;
+
+    &:active:not(.focus-visible) {
+      color: $color-text;
+    }
+  }
+
+  &:disabled {
+    background: $color-default-white;
+    outline-color: $color-text;
+    opacity: 0.4;
+  }
+}
+
+.about__wrap button svg {
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: $color-default-white;
+  transition: color $trans-default;
 }
