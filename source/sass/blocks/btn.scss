@@ -47,53 +47,6 @@
     }
   }
 
-  &--blue-border {
-    width: 205px;
-    min-height: 66px;
-    color: $color-text;
-    border: 2px solid $color-text;
-    transition: color $trans-default;
-
-    @include vp-1366 {
-      min-height: 56px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -2px;
-      right: -2px;
-      bottom: -2px;
-      left: -2px;
-      background: $red-to-blue;
-      opacity: 0;
-      transition: opacity $trans-default;
-    }
-
-    @include hover-focus {
-      color: $color-default-white;
-      border-color: $color-transparent;
-      outline: none;
-
-      &:hover:not(.focus-visible)::after {
-        opacity: 1;
-      }
-
-      &.focus-visible:focus::after {
-        opacity: 1;
-      }
-    }
-
-    @include active {
-      color: rgba(255, 255, 255, 0.7);
-      border-color: $color-transparent;
-
-      &:active:not(.focus-visible)::after {
-        opacity: 1;
-      }
-    }
-  }
-
   &--red {
     background-color: $color-torch-red;
   }

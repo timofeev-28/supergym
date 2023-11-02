@@ -18,13 +18,15 @@ $color-torch-red:                   #ff1553;
 $color-overlay:      rgba(20, 54, 122, 0.5);
 $color-btn-outline:   rgba(237, 2, 51, 0.2);
 $color-bcg-section:                 #f8f9fc;
+$color-bcg-price:                   #e8e8e8;
 
 
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
-$red-to-blue:                    linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+$red-to-blue:                       linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+$red-to-blue-border:                linear-gradient(134deg, #ed0233 1%, #003eb7 99%);
 
 // Typography
 // ---------------------------------

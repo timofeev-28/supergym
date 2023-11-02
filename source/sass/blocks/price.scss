@@ -1,11 +1,54 @@
 .price {
-  padding-block: 120px;
+  position: relative;
+  padding-block: 126px;
   background-color: $color-bcg-section;
+  z-index: 1;
+
+  @include vp-1366 {
+    padding-block: 100px;
+  }
+
+  @include vp-768 {
+    padding-block: 74px;
+  }
+}
+
+.price__bcg-img {
+  position: absolute;
+  right: 0;
+  bottom: -143px;
+
+  @include vp-1366 {
+    bottom: -147px;
+  }
+
+  @include vp-768 {
+    display: none;
+  }
+}
+
+.price__bcg-img img {
+  width: 287px;
+  height: 494px;
+  object-fit: contain;
+
+  @include vp-1366 {
+    width: 327px;
+    height: 423px;
+  }
 }
 
 .price__title {
-  margin-bottom: 38px;
+  margin-bottom: 23px;
   text-align: center;
+
+  @include vp-1366 {
+    margin-bottom: 25px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 9px;
+  }
 }
 
 .price__list-controls {
@@ -14,11 +57,21 @@
   gap: 50px;
   margin-top: 0;
   margin-inline: auto;
-  margin-bottom: 37px;
+  margin-bottom: 36px;
   width: fit-content;
   padding-left: 0;
   list-style: none;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+  @include vp-1366 {
+    gap: 54px;
+    margin-bottom: 45px;
+  }
+
+  @include vp-768 {
+    gap: 45px;
+    margin-bottom: 34px;
+  }
 }
 
 .price__span {
@@ -28,7 +81,7 @@
 
 .price__control {
   position: relative;
-  padding: 0;
+  padding: 11px 0;
   font-family: $ff-placeholder;
   font-size: 20px;
   font-weight: 400;
@@ -40,6 +93,17 @@
   transition: color $trans-default, opacity $trans-default;
   user-select: none;
 
+  @include vp-1366 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include vp-768 {
+    padding: 14px 0;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   @include hover-focus {
     color: $color-accent-btn;
     opacity: 1;
@@ -50,7 +114,7 @@
     content: "";
     position: absolute;
     right: 0;
-    bottom: -6px;
+    bottom: -2px;
     left: 0;
     height: 2px;
     background-color: #d10a42;
@@ -69,7 +133,7 @@
   }
 }
 
-.price__control.js-active {
+.price__control.is-active {
   opacity: 1;
 
   &::after {
@@ -78,18 +142,222 @@
 }
 
 .price__list {
-  display: flex;
-  // flex-wrap: wrap;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 39px;
   margin: 0;
   padding-left: 0;
   list-style: none;
+
+  @include vp-1366 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  @include vp-1366 {
+    gap: 34px;
+  }
+}
+
+// дополнительные св-ва к классу btn
+.price__link {
+  width: 205px;
+  min-height: 66px;
+  color: $color-text;
+  border: 2px solid $color-text;
+  transition: color $trans-default;
+
+  @include vp-1366 {
+    min-height: 56px;
+  }
+
+  // фон для кнопки так сделан для возможности использовать transition
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background: $red-to-blue;
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  @include hover-focus {
+    color: $color-default-white;
+    border-color: $color-transparent;
+    outline: none;
+
+    &:hover:not(.focus-visible)::after {
+      opacity: 1;
+    }
+
+    &.focus-visible:focus::after {
+      opacity: 1;
+    }
+  }
+
+  @include active {
+    color: rgba(255, 255, 255, 0.7);
+    border-color: $color-transparent;
+
+    &:active:not(.focus-visible)::after {
+      opacity: 1;
+    }
+  }
 }
 
 .price__item {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 65px 77px;
+  align-items: center;
+  padding: 60px 71px;
+  padding-bottom: 58px;
   background-color: $color-default-white;
-  border: 7px solid #d10a42;
+  border: 7px solid $color-default-white;
+  background-clip: padding-box;
+  transition: border-color $trans-default;
+
+  @include vp-1366 {
+    width: 65%;
+  }
+
+  @include vp-768 {
+    padding: 45px 35px;
+    padding-bottom: 43px;
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -7px;
+    background: $red-to-blue-border;
+  }
+
+  @include hover-focus {
+    border-color: $color-transparent;
+    outline: none;
+  }
+
+  @include hover-focus {
+    &:hover:not(.focus-visible) .price__link {
+      color: $color-default-white;
+      border-color: $color-transparent;
+      outline: none;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &.focus-visible:focus .price__link {
+      color: $color-default-white;
+      border-color: $color-transparent;
+      outline: none;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  // выделенная средняя карточка
+  &--highlighted {
+    border-color: $color-transparent;
+
+    .price__link {
+      color: $color-default-white;
+      border-color: $color-transparent;
+      outline: none;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.price__subtitle {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+  color: $color-text;
+
+  @include vp-1366 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.price__lessons {
+  display: inline-block;
+  margin-bottom: 68px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-text;
+
+  @include vp-1366 {
+    margin-bottom: 73px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 62px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.price__price {
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 150%;
+  color: $color-accent-btn;
+
+  @include vp-1366 {
+    margin-bottom: 25px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 24px;
+    font-size: 48px;
+  }
+
+  &::before {
+    content: attr(data-price);
+    position: absolute;
+    top: -61%;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 150%;
+    color: $color-bcg-price;
+
+    @include vp-768 {
+      font-size: 80px;
+    }
+  }
+}
+
+.price__price svg {
+  width: 24px;
+  height: 33px;
 }
