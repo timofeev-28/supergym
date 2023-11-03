@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Самый большой фитнес центр в Омске с самым современным оборудованием">
     <title>Supergym</title>
     <link rel="stylesheet" href="css/style.min.css">
@@ -80,7 +80,7 @@
                 <source type="image/jpeg" media="(max-width: 1365px)" srcset="img/about-poster-tablet@1x.jpg 1x, img/about-poster-tablet@2x.jpg 2x">
                 <img src="img/about-poster-desktop@1x.jpg" width="364" height="228" srcset="img/about-poster-desktop@2x.jpg 2x" alt="Постер для видео тренажерного зала">
               </picture>
-              <iframe data-iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="Бесплатные интерактивные онлайн-курсы" frameborder="0" loading="lazy"></iframe>
+              <iframe data-iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="Бесплатные интерактивные онлайн-курсы" loading="lazy"></iframe>
               <button data-video-btn type="button" aria-label="Воспроизвести видео">
                 <svg width="16" height="16" viewBox="0 0 16 16" role="img">
                   <use href="img/sprite.svg#play"></use>
@@ -103,44 +103,57 @@
             <h2 class="price__title title">Абонементы</h2>
             <ul class="price__list-controls">
               <li>
-                <button class="price__control is-active" type="button" data-price-control="control">1 месяц</button>
+                <button class="price__control" type="button" data-price-control>1 месяц</button>
               </li>
               <li>
-                <button class="price__control" type="button" data-price-control="control">6 месяцев</button>
+                <button class="price__control" type="button" data-price-control>6 месяцев</button>
               </li>
               <li>
-                <button class="price__control" type="button" data-price-control="control">12 месяцев</button>
+                <button class="price__control" type="button" data-price-control>12 месяцев</button>
               </li>
             </ul>
             <ul class="price__list">
               <li class="price__item" tabindex="0">
                 <h3 class="price__subtitle">С тренером</h3>
-                <span class="price__lessons">12 занятий</span>
-                <p class="price__price" data-price="5000">5000
+                <span class="price__lessons" data-lessons>12 занятий</span>
+
+                <div class="price__price-wrap">
+                  <span class="price__price" data-price>5000</span>
                   <svg width="30" height="42" viewBox="0 0 30 42">
                     <use href="img/sprite.svg#ruble"></use>
                   </svg>
-                </p>
+                  <span class="price__price-bcg" data-price-bcg>5000</span>
+                </div>
+
+
                 <a class="price__link btn btn--blue-border" href="#"><span class="price__span">Купить абонемент</span></a>
               </li>
               <li class="price__item price__item--highlighted" tabindex="0">
                 <h3 class="price__subtitle">Дневной</h3>
                 <span class="price__lessons">с 8:00 до 17:00</span>
-                <p class="price__price" data-price="1700">1700
+
+                <div class="price__price-wrap">
+                  <span class="price__price" data-price>1700</span>
                   <svg width="30" height="42" viewBox="0 0 30 42">
                     <use href="img/sprite.svg#ruble"></use>
                   </svg>
-                </p>
+                  <span class="price__price-bcg" data-price-bcg>1700</span>
+                </div>
+
                 <a class="price__link btn btn--blue-border" href="#"><span class="price__span">Купить абонемент</span></a>
               </li>
               <li class="price__item" tabindex="0">
                 <h3 class="price__subtitle">Полный день</h3>
                 <span class="price__lessons">с 8:00 до 22:00</span>
-                <p class="price__price" data-price="2700">2700
+
+                <div class="price__price-wrap">
+                  <span class="price__price" data-price>2700</span>
                   <svg width="30" height="42" viewBox="0 0 30 42">
                     <use href="img/sprite.svg#ruble"></use>
                   </svg>
-                </p>
+                  <span class="price__price-bcg" data-price-bcg>2700</span>
+                </div>
+
                 <a class="price__link btn btn--blue-border" href="#"><span class="price__span">Купить абонемент</span></a>
               </li>
             </ul>
