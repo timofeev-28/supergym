@@ -260,6 +260,10 @@
     &:hover:not(.focus-visible) svg {
       color: $color-text;
     }
+
+    &.focus-visible:focus svg {
+      color: $color-text;
+    }
   }
 
   @include active {

@@ -40,6 +40,7 @@
     @include hover-focus {
       color: $color-accent-btn;
       background-color: $color-default-white;
+      outline: none;
     }
 
     @include active {

@@ -9,7 +9,8 @@
   }
 
   @include vp-768 {
-    padding-block: 74px;
+    padding-top: 74px;
+    padding-bottom: 70px;
   }
 }
 
@@ -156,7 +157,7 @@
     justify-items: center;
   }
 
-  @include vp-1366 {
+  @include vp-768 {
     gap: 34px;
   }
 }
@@ -206,6 +207,13 @@
 
     &:active:not(.focus-visible)::after {
       opacity: 1;
+    }
+  }
+
+  // в средней карточке сделан outline при фокусе для удобства пользователя
+  &--active {
+    @include hover-focus {
+      outline: 2px solid $color-red;
     }
   }
 }

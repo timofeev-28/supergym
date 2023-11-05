@@ -3,6 +3,10 @@ const prices = document.querySelectorAll('[data-price]');
 const backgroundPrices = document.querySelectorAll('[data-price-bcg]');
 const lesson = document.querySelector('[data-lessons]');
 
+// для проверки наличия элеметов в документе
+const buttonPeriod = document.querySelector('[data-price-control]');
+const priceLesson = document.querySelector('[data-price]');
+
 const pricesPerPeriods = [
   // Цены для 1 месяца
   [5000, 1700, 2700],
@@ -15,9 +19,9 @@ const pricesPerPeriods = [
 ];
 
 // количество занятий с тренером для разных периодов
-const lessonsPerPeriods = ['12 занятий', '72 занятия (12/мес)', '144 занятия (12/мес)'];
+const lessonsPerPeriods = ['12 занятий', '72 занятия', '144 занятия'];
 
-const initPrices = () => {
+const changePrices = () => {
   buttonPeriods[0].classList.add('is-active');
 
   buttonPeriods.forEach((button, index) => {
@@ -40,6 +44,12 @@ const initPrices = () => {
       button.classList.add('is-active');
     });
   });
+};
+
+const initPrices = () => {
+  if (document.body.contains(buttonPeriod) && document.body.contains(priceLesson)) {
+    changePrices();
+  }
 };
 
 export {initPrices};

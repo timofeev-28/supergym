@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {initVideoBtn} from './modules/init-video';
 import {initPrices} from './modules/init-price';
+// import {swiper} from './modules/init-swiper';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initVideoBtn();
     initPrices();
+    // swiper();
   });
 });
 
