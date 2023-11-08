@@ -19,6 +19,7 @@
 
   @include vp-768 {
     grid-template-columns: 1fr;
+    padding-bottom: 30px;
   }
 }
 
@@ -64,7 +65,7 @@
     margin-bottom: 3px;
   }
 
-  @include vp-1366 {
+  @include vp-768 {
     gap: 5px 48px;
     margin-bottom: 10px;
   }
@@ -169,20 +170,18 @@
   }
 }
 
-.btn {
-  &--white-border {
-    width: 340px;
-    min-height: 66px;
+.games__link {
+  width: 340px;
+  min-height: 66px;
 
-    @include vp-1366 {
-      width: 202px;
-      min-height: 56px;
-    }
+  @include vp-1366 {
+    width: 202px;
+    min-height: 56px;
+  }
 
-    @include vp-768 {
-      width: 210px;
-      min-height: 56px;
-    }
+  @include vp-768 {
+    width: 210px;
+    min-height: 56px;
   }
 }
 

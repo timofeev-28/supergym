@@ -1,0 +1,254 @@
+.jury {
+  padding-top: 54px;
+  padding-bottom: 120px;
+
+  @include vp-1366 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 41px;
+  }
+
+  @include vp-768 {
+    padding-top: 41px;
+  }
+}
+
+.jury__wrapper {
+  position: relative;
+
+  @include vp-1366 {
+    width: 568px;
+  }
+
+  @include vp-768 {
+    width: 226px;
+  }
+}
+
+.jury__title {
+  margin-top: 0;
+  margin-bottom: 39px;
+  font-family: $ff-alumni;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 1.62px;
+
+  @include vp-1366 {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+    text-align: center;
+  }
+
+  @include vp-768 {
+    margin-bottom: 41px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.jury__list {
+  margin-block: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.jury__info {
+  position: absolute;
+  inset: 0;
+  padding: 46px 15px 15px;
+  text-align: center;
+  overflow-y: auto;
+  opacity: 0;
+  transform: translateY(10px);
+  color: $color-default-white;
+  transition: opacity $trans-default, transform $trans-default;
+
+  @include vp-768 {
+    padding: 25px 15px 15px;
+  }
+}
+
+.jury__item h3 {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  width: max-content;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-default-white;
+  transition: opacity $trans-default;
+}
+
+.jury__item {
+  @include hover {
+    &:hover:not(.focus-visible) .jury__info {
+      opacity: 1;
+      transform: none;
+    }
+
+    &:hover:not(.focus-visible) h3 {
+      opacity: 0;
+    }
+  }
+
+  @include vp-1366 {
+    @include active {
+      &:active:not(.focus-visible) .jury__info {
+        opacity: 1;
+        transform: none;
+      }
+
+      &:active:not(.focus-visible) h3 {
+        opacity: 0;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(16, 38, 84, 0.89);
+    filter: drop-shadow(0 0 35px rgba(42, 59, 99, 0.17));
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  @include hover {
+    &:hover:not(.focus-visible)::before {
+      opacity: 1;
+    }
+  }
+
+  @include vp-1366 {
+    @include active {
+      &:active:not(.focus-visible)::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.jury__item img {
+  width: 260px;
+  height: 294px;
+  object-fit: cover;
+
+  @include vp-1366 {
+    width: 268px;
+  }
+
+  @include vp-768 {
+    width: 226px;
+    height: 274px;
+  }
+}
+
+.jury-info h4 {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.jury-info p {
+  margin-top: 0;
+  margin-bottom: 33px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include vp-768 {
+    margin-bottom: 20px;
+  }
+}
+
+.jury-info__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-block: 0;
+  padding-left: 51px;
+  text-align: left;
+  list-style-type: disc;
+
+  @include vp-768 {
+    padding-left: 20px;
+  }
+}
+
+.jury-info__list li {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.jury__button svg {
+  color: $color-text;
+  transition: color $trans-default;
+
+  @include vp-768 {
+    width: 12px;
+    height: 21px;
+  }
+}
+
+.jury__button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  background-color: $color-transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 50%;
+  transition: background-color $trans-default, border-color $trans-default;
+
+  @include vp-768 {
+    top: 50%;
+    width: 47px;
+    height: 47px;
+  }
+
+  &--prev {
+    left: -75px;
+    transform: translateY(-50%);
+
+    @include vp-768 {
+      left: -48px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--next {
+    right: -76px;
+    transform: rotate(180deg) translateY(52%);
+
+    @include vp-768 {
+      right: -48px;
+      transform: rotate(180deg) translateY(49%);
+    }
+  }
+
+  @include hover-focus {
+    border-color: $color-text;
+  }
+
+  @include active {
+    background-color: $color-text;
+
+    &:active svg {
+      color: $color-default-white;
+    }
+  }
+}

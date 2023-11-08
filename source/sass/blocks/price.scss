@@ -154,7 +154,6 @@
 
   @include vp-1366 {
     grid-template-columns: 1fr;
-    justify-items: center;
   }
 
   @include vp-768 {
@@ -231,6 +230,7 @@
   transition: border-color $trans-default;
 
   @include vp-1366 {
+    justify-self: center;
     width: 65%;
   }
 
