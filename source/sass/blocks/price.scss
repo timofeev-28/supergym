@@ -368,6 +368,7 @@
   font-weight: 700;
   line-height: 150%;
   color: $color-bcg-price;
+  user-select: none;
 
   @include vp-768 {
     font-size: 80px;

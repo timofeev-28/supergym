@@ -5,10 +5,10 @@ const buttonPrev = document.querySelector('[data-button="jury-prev"]');
 const setSliderJury = () => {
   return new window.Swiper(sliderJury, {
     loop: true,
-    speed: 500,
-    // autoplay: {
-    //   delay: 3000,
-    // },
+    speed: 700,
+    autoplay: {
+      delay: 3000,
+    },
 
     navigation: {
       nextEl: buttonNext,

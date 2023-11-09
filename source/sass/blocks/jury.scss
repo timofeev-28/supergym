@@ -98,16 +98,16 @@
     }
   }
 
-  @include vp-1366 {
-    @include active {
-      &:active:not(.focus-visible) .jury__info {
-        opacity: 1;
-        transform: none;
-      }
+  @include focus {
+    outline: none;
 
-      &:active:not(.focus-visible) h3 {
-        opacity: 0;
-      }
+    &.focus-visible:focus .jury__info {
+      opacity: 1;
+      transform: none;
+    }
+
+    &.focus-visible:focus h3 {
+      opacity: 0;
     }
   }
 
@@ -127,11 +127,39 @@
     }
   }
 
+  @include focus {
+    &.focus-visible:focus::before {
+      opacity: 1;
+    }
+  }
+
   @include vp-1366 {
-    @include active {
-      &:active:not(.focus-visible)::before {
-        opacity: 1;
-      }
+    // @include active {
+    //   &:active:not(.focus-visible) .jury__info {
+    //     opacity: 1;
+    //     transform: none;
+    //   }
+
+    //   &:active:not(.focus-visible) h3 {
+    //     opacity: 0;
+    //   }
+
+    //   &:active:not(.focus-visible)::before {
+    //     opacity: 1;
+    //   }
+    // }
+
+    &.is-active::before {
+      opacity: 1;
+    }
+
+    &.is-active .jury__info {
+      opacity: 1;
+      transform: none;
+    }
+
+    &.is-active h3 {
+      opacity: 0;
     }
   }
 }
@@ -242,6 +270,7 @@
 
   @include hover-focus {
     border-color: $color-text;
+    outline: none;
   }
 
   @include active {

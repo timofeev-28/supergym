@@ -82,7 +82,7 @@
               </picture>
               <iframe data-iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="Бесплатные интерактивные онлайн-курсы" loading="lazy"></iframe>
               <button data-video-btn type="button" aria-label="Воспроизвести видео">
-                <svg width="16" height="16" viewBox="0 0 16 16" role="img">
+                <svg width="16" height="16" role="img">
                   <use href="img/sprite.svg#play"></use>
                 </svg>
               </button>
@@ -118,10 +118,10 @@
                 <span class="price__lessons" data-lessons>12 занятий</span>
                 <div class="price__price-wrap">
                   <span class="price__price" data-price>5000</span>
-                  <svg width="30" height="42" viewBox="0 0 30 42">
+                  <svg width="30" height="42" aria-hidden="true">
                     <use href="img/sprite.svg#ruble"></use>
                   </svg>
-                  <span class="price__price-bcg" data-price-bcg>5000</span>
+                  <span class="price__price-bcg" aria-hidden="true" data-price-bcg>5000</span>
                 </div>
                 <a class="price__link btn btn--blue-border" href="#"><span class="price__span">Купить абонемент</span></a>
               </li>
@@ -130,10 +130,10 @@
                 <span class="price__lessons">с 8:00 до 17:00</span>
                 <div class="price__price-wrap">
                   <span class="price__price" data-price>1700</span>
-                  <svg width="30" height="42" viewBox="0 0 30 42">
+                  <svg width="30" height="42" aria-hidden="true">
                     <use href="img/sprite.svg#ruble"></use>
                   </svg>
-                  <span class="price__price-bcg" data-price-bcg>1700</span>
+                  <span class="price__price-bcg" aria-hidden="true" data-price-bcg>1700</span>
                 </div>
                 <a class="price__link price__link--active btn btn--blue-border" href="#"><span class="price__span">Купить абонемент</span></a>
               </li>
@@ -142,16 +142,17 @@
                 <span class="price__lessons">с 8:00 до 22:00</span>
                 <div class="price__price-wrap">
                   <span class="price__price" data-price>2700</span>
-                  <svg width="30" height="42" viewBox="0 0 30 42">
+                  <svg width="30" height="42" aria-hidden="true">
                     <use href="img/sprite.svg#ruble"></use>
                   </svg>
-                  <span class="price__price-bcg" data-price-bcg>2700</span>
+                  <span class="price__price-bcg" aria-hidden="true" data-price-bcg>2700</span>
                 </div>
                 <a class="price__link btn btn--blue-border" href="#"><span class="price__span">Купить абонемент</span></a>
               </li>
             </ul>
           </div>
         </section>
+
         <section class="games container games__container" data-test="games">
           <div class="games__content-wrap">
             <div class="games__content">
@@ -184,10 +185,20 @@
 
         <section class="jury container">
           <h2 class="jury__title">Жюри</h2>
-            <div class="jury__wrapper">
+          <div class="jury__wrapper">
+            <button class="jury__button jury__button--prev" data-button="jury-prev" type="button" aria-label="Предыдущий слайд.">
+              <svg width="18" height="34" aria-hidden="true">
+                <use href="img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="jury__button jury__button--next" data-button="jury-next" type="button" aria-label="Следующий слайд.">
+              <svg width="18" height="34" aria-hidden="true">
+                <use href="img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
             <div class="jury__swiper swiper" data-swiper="jury">
               <ul class="jury__list swiper-wrapper">
-                <li class="jury__item swiper-slide" tabindex="0">
+                <li class="jury__item swiper-slide" data-jury>
                   <h3 class="jury__item-title">Анна Павлова</h3>
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/jury/jury-1-mobile@1x.webp 1x, img/jury/jury-1-mobile@2x.webp 2x">
@@ -207,7 +218,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="jury__item swiper-slide" tabindex="0">
+                <li class="jury__item swiper-slide" data-jury>
                   <h3 class="jury__item-title">Алексей Лавров</h3>
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/jury/jury-2-mobile@1x.webp 1x, img/jury/jury-2-mobile@2x.webp 2x">
@@ -227,7 +238,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="jury__item swiper-slide" tabindex="0">
+                <li class="jury__item swiper-slide" data-jury>
                   <h3 class="jury__item-title">Александр Пашков</h3>
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/jury/jury-3-mobile@1x.webp 1x, img/jury/jury-3-mobile@2x.webp 2x">
@@ -247,7 +258,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="jury__item swiper-slide" tabindex="0">
+                <li class="jury__item swiper-slide" data-jury>
                   <h3 class="jury__item-title">Мария Кетова</h3>
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/jury/jury-4-mobile@1x.webp 1x, img/jury/jury-4-mobile@2x.webp 2x">
@@ -268,9 +279,9 @@
                   </div>
                 </li>
 
-                <li class="jury__item swiper-slide" tabindex="0">
+                <li class="jury__item swiper-slide" data-jury>
                   <h3 class="jury__item-title">Арнольд Шварценеггер</h3>
-                  <img src="img/jury/jury-5.jpg" width="260" height="294" alt="Фото члена жюри Арнольда Шварценеггера.">
+                  <img src="img/jury/jury-5.webp" width="260" height="294" alt="Фото члена жюри Арнольда Шварценеггера.">
                   <div class="jury__info jury-info">
                     <h4 class="jury-info__title">Арнольд Шварценеггер</h4>
                     <p class="jury-info__specialty">Bodybuilding</p>
@@ -281,7 +292,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="jury__item swiper-slide" tabindex="0">
+                <li class="jury__item swiper-slide" data-jury>
                   <h3 class="jury__item-title">Вин Дизель</h3>
                   <img src="img/jury/jury-6.jpg" width="260" height="294" alt="Фото члена жюри Вин Дизеля.">
                   <div class="jury__info jury-info">
@@ -294,7 +305,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="jury__item swiper-slide" tabindex="0">
+                <li class="jury__item swiper-slide" data-jury>
                   <h3 class="jury__item-title">Сильвестр Сталлоне</h3>
                   <img src="img/jury/jury-7.jpg" width="260" height="294" alt="Фото члена жюри Сильвестра Сталлоне.">
                   <div class="jury__info jury-info">
@@ -307,7 +318,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="jury__item swiper-slide" tabindex="0">
+                <li class="jury__item swiper-slide" data-jury>
                   <h3 class="jury__item-title">Мария Кетова</h3>
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/jury/jury-4-mobile@1x.webp 1x, img/jury/jury-4-mobile@2x.webp 2x">
@@ -329,16 +340,6 @@
                 </li>
               </ul>
             </div>
-            <button class="jury__button jury__button--prev" data-button="jury-prev" type="button" aria-label="Предыдущий слайд.">
-              <svg width="18" height="34">
-                <use href="img/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <button class="jury__button jury__button--next" data-button="jury-next" type="button" aria-label="Следующий слайд.">
-              <svg width="18" height="34">
-                <use href="img/sprite.svg#arrow"></use>
-              </svg>
-            </button>
           </div>
         </section>
 

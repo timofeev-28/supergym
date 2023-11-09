@@ -1,4 +1,4 @@
-import {initJurySlider} from './sliders/init-swiper-jury';
+import {initJurySlider} from '../sliders/init-swiper-jury';
 
 const initSliders = () => {
   initJurySlider();
