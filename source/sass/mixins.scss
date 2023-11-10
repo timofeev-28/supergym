@@ -18,6 +18,12 @@
   }
 }
 
+@mixin focus-within {
+  &:focus-within {
+    @content;
+  }
+}
+
 @mixin active {
   &:active:not(.focus-visible) {
     @content;

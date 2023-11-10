@@ -222,7 +222,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 71px;
+  padding: 60px 55px;
   padding-bottom: 58px;
   background-color: $color-default-white;
   border: 7px solid $color-default-white;
@@ -248,31 +248,16 @@
     background: $red-to-blue-border;
   }
 
-  @include hover-focus {
+  @include hover {
     border-color: $color-transparent;
-    outline: none;
   }
 
-  @include hover-focus {
-    &:hover:not(.focus-visible) .price__link {
-      color: $color-default-white;
-      border-color: $color-transparent;
-      outline: none;
+  @include focus-within {
+    border-color: $color-transparent;
+  }
 
-      &::after {
-        opacity: 1;
-      }
-    }
-
-    &.focus-visible:focus .price__link {
-      color: $color-default-white;
-      border-color: $color-transparent;
-      outline: none;
-
-      &::after {
-        opacity: 1;
-      }
-    }
+  &:focus-within {
+    border-color: $color-transparent;
   }
 
   // выделенная средняя карточка

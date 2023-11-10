@@ -6,9 +6,6 @@ const setSliderJury = () => {
   return new window.Swiper(sliderJury, {
     loop: true,
     speed: 700,
-    autoplay: {
-      delay: 3000,
-    },
 
     navigation: {
       nextEl: buttonNext,
