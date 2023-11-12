@@ -7,10 +7,12 @@
     flex-direction: column;
     align-items: center;
     padding-top: 41px;
+    padding-bottom: 100px;
   }
 
   @include vp-768 {
     padding-top: 41px;
+    padding-bottom: 70px;
   }
 }
 
