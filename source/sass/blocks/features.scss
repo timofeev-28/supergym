@@ -1,5 +1,6 @@
 .features {
   padding-block: 120px;
+  padding-bottom: 124px;
   background-color: $color-bcg-section;
   overflow-x: hidden;
 
@@ -8,7 +9,8 @@
   }
 
   @include vp-768 {
-    padding-block: 71px;
+    padding-top: 71px;
+    padding-bottom: 60px;
   }
 }
 
@@ -18,10 +20,6 @@
   @include vp-1366 {
     padding-inline: 0;
   }
-
-  // @include vp-1366 {
-  //   padding-left: 3px;
-  // }
 }
 
 .features__wrapper h2 {
@@ -258,7 +256,6 @@
 
   @include vp-1366 {
     align-self: center;
-    text-align: center;
   }
 
   @include vp-768 {

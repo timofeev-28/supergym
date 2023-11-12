@@ -1,0 +1,337 @@
+.offers {
+  padding-block: 120px;
+
+  @include vp-1366 {
+    padding-block: 99px;
+  }
+
+  @include vp-768 {
+    padding-block: 72px;
+  }
+}
+
+.offers__wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 70px;
+  font-family: $ff-alumni;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 1.62px;
+  text-align: center;
+  color: $color-text;
+
+  @include vp-1366 {
+    margin-bottom: 39px;
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 41px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.offers__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-block: 0;
+  padding-left: 0;
+  list-style: none;
+
+  @include vp-1366 {
+    gap: 30px;
+  }
+
+  @include vp-768 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.offers__item-premium {
+  grid-column: span 1;
+  grid-row: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include vp-1366 {
+    grid-column: span 2;
+    grid-row: span 1;
+    justify-self: center;
+    grid-template-columns: 279px 399px;
+  }
+
+  @include vp-768 {
+    grid-column: span 1;
+    justify-self: unset;
+    grid-template-columns: 1fr;
+  }
+}
+
+.offers__wrap-premium-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 45px 45px;
+  min-height: 462px;
+  color: $color-default-white;
+  background-color: $color-red;
+
+  @include vp-1366 {
+    padding: 45px 45px 45px;
+  }
+
+  @include vp-768 {
+    align-items: center;
+    width: 100%;
+    min-height: 300px;
+  }
+}
+
+.offers__wrap-premium-content h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+
+  @include vp-1366 {
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 9px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.offers__wrap-premium-content b {
+  margin-bottom: 25px;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 70px;
+
+  @include vp-1366 {
+    margin-bottom: 20px;
+  }
+
+  @include vp-768 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+.offers__wrap-premium-content p {
+  margin-top: 0;
+  margin-bottom: auto;
+  padding-bottom: 18px;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include vp-768 {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+.offers__wrap-premium-content a {
+  position: relative;
+  padding-bottom: 2px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: $color-default-white;
+  border-bottom: 1px solid $color-default-white;
+  outline: none;
+  transition: opacity $trans-default, color $trans-200, border-color $trans-200;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -7px;
+    left: -10px;
+    border: 1px solid $color-transparent;
+    transition: border-color $trans-default;
+  }
+
+  @include focus {
+    border-color: $color-transparent;
+
+    &.focus-visible:focus::after {
+      border-color: $color-default-white;
+    }
+  }
+
+  @include hover {
+    &:hover:not(.focus-visible) {
+      opacity: 0.8;
+    }
+  }
+
+  @include active-not-disabled {
+    &:active:not(.focus-visible):not(:disabled) {
+      color: $color-default-white;
+      border-color: $color-default-white;
+    }
+  }
+
+  @include disabled {
+    opacity: 0.5;
+  }
+}
+
+.offers__wrap-img {
+  @include vp-768 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: #6794ec;
+  }
+}
+
+.offers__item-premium img {
+  width: 280px;
+  height: 462px;
+
+  @include vp-1366 {
+    width: 399px;
+  }
+
+  @include vp-768 {
+    width: 290px;
+    height: 330px;
+  }
+}
+
+.offers__item {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  padding: 23px 28px 28px;
+  color: $color-text;
+  border: 7px solid $color-neon-blue;
+  border-image: linear-gradient(170deg, #d10a42 0, #00359f 100%);
+  border-image-slice: 1;
+
+  @include vp-1366 {
+    max-width: 324px;
+    min-height: 211px;
+  }
+
+  @include vp-768 {
+    justify-self: center;
+    align-items: center;
+    padding: 39px 28px 33px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &--left {
+    @include vp-1366 {
+      justify-self: end;
+    }
+
+    @include vp-768 {
+      justify-self: center;
+      align-items: center;
+    }
+  }
+}
+
+.offers__item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+
+  @include vp-1366 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include vp-768 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.offers__item p {
+  margin-top: 0;
+  margin-bottom: auto;
+  padding-bottom: 18px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include vp-768 {
+    margin-inline: 15px;
+    // padding-right: 3px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+
+.offers__item a {
+  position: relative;
+  padding-bottom: 3px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: $color-text;
+  border-bottom: 1px solid $color-text;
+  outline: none;
+  transition: opacity $trans-default, color $trans-200, border-color $trans-200;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -7px;
+    left: -10px;
+    border: 1px solid $color-transparent;
+    transition: border-color $trans-default;
+  }
+
+  @include focus {
+    border-color: $color-transparent;
+
+    &.focus-visible:focus::after {
+      border-color: $color-text;
+    }
+  }
+
+  @include hover {
+    &:hover:not(.focus-visible) {
+      opacity: 0.8;
+    }
+  }
+
+  @include active-not-disabled {
+    &:active:not(.focus-visible):not(:disabled) {
+      color: $color-text;
+      border-color: $color-text;
+    }
+  }
+
+  @include disabled {
+    opacity: 0.5;
+  }
+}

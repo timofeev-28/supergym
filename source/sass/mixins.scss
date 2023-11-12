@@ -48,6 +48,13 @@
   }
 }
 
+@mixin disabled {
+  &:disabled,
+  &.button-disabled {
+    @content;
+  }
+}
+
 // Desktop first
 
 @mixin vp-1366 {

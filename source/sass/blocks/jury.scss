@@ -11,7 +11,7 @@
   }
 
   @include vp-768 {
-    padding-top: 41px;
+    padding-top: 38px;
     padding-bottom: 70px;
   }
 }
@@ -31,24 +31,15 @@
 .jury__title {
   margin-top: 0;
   margin-bottom: 39px;
-  font-family: $ff-alumni;
-  font-size: 54px;
-  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 1.62px;
 
   @include vp-1366 {
-    font-size: 42px;
-    line-height: 42px;
-    letter-spacing: 1.26px;
     text-align: center;
+    margin-bottom: 35px;
   }
 
   @include vp-768 {
-    margin-bottom: 41px;
-    font-size: 32px;
-    line-height: 32px;
-    letter-spacing: 0.96px;
+    margin-bottom: 38px;
   }
 }
 
