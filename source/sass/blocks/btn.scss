@@ -52,7 +52,28 @@
     background-color: $color-torch-red;
   }
 
-  &:disabled {
+  &--tab {
+    min-height: 54px;
+    font-family: $ff-placeholder;
+    color: $color-text;
+    border: none;
+    box-shadow: inset 0 0 0 1px $color-btn-tab-border;
+    transition: border-color $trans-default, box-shadow $trans-default;
+
+    @include hover-focus {
+      box-shadow: inset 0 0 0 1px $color-text;
+      outline: none;
+    }
+  }
+
+  &--tab.is-active:not(:focus-visible) {
+    color: $color-default-white;
+    background: $red-to-blue;
+    pointer-events: none;
+    box-shadow: none;
+  }
+
+  @include disabled {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;

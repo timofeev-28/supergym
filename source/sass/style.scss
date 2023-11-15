@@ -4,6 +4,11 @@
 @import "vendor/normalize";
 // Swiper 8.4.7
 @import "vendor/swiper";
+@import "vendor/data-tabs";
+@import "vendor/tabs";
+@import "vendor/data-accordion";
+@import "vendor/accordion";
+
 
 // Global
 // ---------------------------------
@@ -32,6 +37,7 @@
 @import "blocks/jury";
 @import "blocks/features";
 @import "blocks/offers";
+@import "blocks/faq";
 
 // ---------------------------------
 

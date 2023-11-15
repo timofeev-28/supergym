@@ -433,13 +433,234 @@
           </div>
         </section>
 
-        <section data-test="faq">
+        <section class="faq" data-test="faq">
+          <div class="faq__container container">
+            <h2>Вопросы и ответы</h2>
+            <div class="faq__tabs tabs" data-tabs="parent" data-delay="100">
+              <div class="tabs__controls" data-tabs="controls">
+                <button class="tabs__control btn btn--tab is-active" data-tabs="control">Центр</button>
+                <button class="tabs__control btn btn--tab" data-tabs="control">Абонемент</button>
+                <button class="tabs__control btn btn--tab" data-tabs="control">Услуги</button>
+                <button class="tabs__control btn btn--tab" data-tabs="control">Правила</button>
+              </div>
+              <div class="tabs__content" data-tabs="content">
+                <!-- tab: Фитнес-центр -->
+                <div class="tabs__element is-active" data-tabs="element">
+                  <div class="accordion" data-accordion="parent">
+                    <div class="accordion__element is-active" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Как стать членом фитнес-центра?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Где можно посмотреть расписание?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p> Расписание доступно внизу на сайте и в приложении в разделе контакты.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button btn" type="button" data-accordion="button">
+                        Есть кулеры в центре? Предоставляются полотенца?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>В нашем тренажёрном зале мы всегда заботимся о вашем комфорте и гидратации: бесплатная вода доступна всем посетителям. Нет необходимости носить с собой бутылку – просто воспользуйтесь кулером для воды в любое время во время тренировки.</p>
+                          <p>Если вы забыли полотенце, не беспокойтесь, у нас вы можете приобрести мягкие и поглощающие полотенца на ресепшене. Полотенца доступны по доступной цене, чтобы вы могли оставаться сухим и комфортным. Мы стремимся сделать ваше пребывание в зале максимально удобным, чтобы вы могли сосредоточиться на тренировке.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Сколько тренеров работает в клубе и какова их&nbsp;квалификация?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>В нашем фитнес-клубе трудится команда из десяти профессиональных тренеров, каждый из которых имеет высокую квалификацию и сертификацию. Они прошли всестороннее обучение и специализируются на различных аспектах фитнеса, от силовых тренировок до кардио и йоги.</p>
+                          <p>Наши тренеры постоянно повышают свою квалификацию, участвуя в мастер-классах и профессиональных курсах. Мы гордимся тем, что предлагаем нашим клиентам доступ к специалистам высшего класса, готовым помочь достичь любых целей в области здоровья и фитнеса.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- tab: Абонемент -->
+                <div class="tabs__element" data-tabs="element">
+                  <div class="accordion" data-accordion="parent">
+                    <div class="accordion__element is-active" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Как стать членом фитнес-центра?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Где можно посмотреть расписание?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p> Расписание доступно внизу на сайте и в приложении в разделе контакты.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button btn" type="button" data-accordion="button">
+                        Есть кулеры в центре? Предоставляются полотенца?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>В нашем тренажёрном зале мы всегда заботимся о вашем комфорте и гидратации: бесплатная вода доступна всем посетителям. Нет необходимости носить с собой бутылку – просто воспользуйтесь кулером для воды в любое время во время тренировки.</p>
+                          <p>Если вы забыли полотенце, не беспокойтесь, у нас вы можете приобрести мягкие и поглощающие полотенца на ресепшене. Полотенца доступны по доступной цене, чтобы вы могли оставаться сухим и комфортным. Мы стремимся сделать ваше пребывание в зале максимально удобным, чтобы вы могли сосредоточиться на тренировке.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Сколько тренеров работает в клубе и какова их&nbsp;квалификация?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>В нашем фитнес-клубе трудится команда из десяти профессиональных тренеров, каждый из которых имеет высокую квалификацию и сертификацию. Они прошли всестороннее обучение и специализируются на различных аспектах фитнеса, от силовых тренировок до кардио и йоги.</p>
+                          <p>Наши тренеры постоянно повышают свою квалификацию, участвуя в мастер-классах и профессиональных курсах. Мы гордимся тем, что предлагаем нашим клиентам доступ к специалистам высшего класса, готовым помочь достичь любых целей в области здоровья и фитнеса.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- tab: Услуги -->
+                <div class="tabs__element" data-tabs="element">
+                  <div class="accordion" data-accordion="parent">
+                    <div class="accordion__element is-active" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Как стать членом фитнес-центра?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Где можно посмотреть расписание?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p> Расписание доступно внизу на сайте и в приложении в разделе контакты.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button btn" type="button" data-accordion="button">
+                        Есть кулеры в центре? Предоставляются полотенца?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>В нашем тренажёрном зале мы всегда заботимся о вашем комфорте и гидратации: бесплатная вода доступна всем посетителям. Нет необходимости носить с собой бутылку – просто воспользуйтесь кулером для воды в любое время во время тренировки.</p>
+                          <p>Если вы забыли полотенце, не беспокойтесь, у нас вы можете приобрести мягкие и поглощающие полотенца на ресепшене. Полотенца доступны по доступной цене, чтобы вы могли оставаться сухим и комфортным. Мы стремимся сделать ваше пребывание в зале максимально удобным, чтобы вы могли сосредоточиться на тренировке.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Сколько тренеров работает в клубе и какова их&nbsp;квалификация?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>В нашем фитнес-клубе трудится команда из десяти профессиональных тренеров, каждый из которых имеет высокую квалификацию и сертификацию. Они прошли всестороннее обучение и специализируются на различных аспектах фитнеса, от силовых тренировок до кардио и йоги.</p>
+                          <p>Наши тренеры постоянно повышают свою квалификацию, участвуя в мастер-классах и профессиональных курсах. Мы гордимся тем, что предлагаем нашим клиентам доступ к специалистам высшего класса, готовым помочь достичь любых целей в области здоровья и фитнеса.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- tab: Правила -->
+                <div class="tabs__element" data-tabs="element">
+                  <div class="accordion" data-accordion="parent">
+                    <div class="accordion__element is-active" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Как стать членом фитнес-центра?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Где можно посмотреть расписание?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>Расписание доступно внизу на сайте и в приложении в разделе контакты.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button btn" type="button" data-accordion="button">
+                        Есть кулеры в центре? Предоставляются полотенца?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>В нашем тренажёрном зале мы всегда заботимся о вашем комфорте и гидратации: бесплатная вода доступна всем посетителям. Нет необходимости носить с собой бутылку – просто воспользуйтесь кулером для воды в любое время во время тренировки.</p>
+                          <p>Если вы забыли полотенце, не беспокойтесь, у нас вы можете приобрести мягкие и поглощающие полотенца на ресепшене. Полотенца доступны по доступной цене, чтобы вы могли оставаться сухим и комфортным. Мы стремимся сделать ваше пребывание в зале максимально удобным, чтобы вы могли сосредоточиться на тренировке.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__element" data-accordion="element">
+                      <button class="accordion__button" type="button" data-accordion="button">
+                        Сколько тренеров работает в клубе и какова их&nbsp;квалификация?
+                        <span class="accordion__icon" aria-hidden></span>
+                      </button>
+                      <div class="accordion__content" data-accordion="content">
+                        <div class="accordion__wrapper">
+                          <p>В нашем фитнес-клубе трудится команда из десяти профессиональных тренеров, каждый из которых имеет высокую квалификацию и сертификацию. Они прошли всестороннее обучение и специализируются на различных аспектах фитнеса, от силовых тренировок до кардио и йоги.</p>
+                          <p>Наши тренеры постоянно повышают свою квалификацию, участвуя в мастер-классах и профессиональных курсах. Мы гордимся тем, что предлагаем нашим клиентам доступ к специалистам высшего класса, готовым помочь достичь любых целей в области здоровья и фитнеса.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-test="reviews">
           <div class="container">
             <h2>Оставшаяся часть сайта в разработке</h2>
           </div>
         </section>
-
-        <section data-test="reviews"></section>
 
       </main>
       <footer class="footer" data-test="footer">

@@ -1,0 +1,16 @@
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 40px;
+}
+
+.tabs__controls {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.tabs__content {
+  grid-column: span 9;
+}
