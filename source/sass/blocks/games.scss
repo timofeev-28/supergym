@@ -15,7 +15,11 @@
 
 .games__container {
   display: grid;
-  grid-template-columns: 43% 1fr;
+  grid-template-columns: 500px 1fr;
+
+  @include vp-1366 {
+    grid-template-columns: 43% 1fr;
+  }
 
   @include vp-768 {
     grid-template-columns: 1fr;

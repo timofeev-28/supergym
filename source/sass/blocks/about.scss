@@ -103,13 +103,11 @@
   }
 
   @include vp-1366 {
-    padding-left: 2px;
     max-width: 507px;
     text-align: center;
   }
 
   @include vp-768 {
-    padding-left: 0;
     max-width: 100%;
     font-size: 14px;
     line-height: 22px;

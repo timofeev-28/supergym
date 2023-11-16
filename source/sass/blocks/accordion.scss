@@ -1,0 +1,190 @@
+.accordion__element {
+  color: $color-text;
+  border-top: 1px solid $color-btn-ac-border;
+
+  &:last-child {
+    border-bottom: 1px solid $color-btn-ac-border;
+  }
+}
+
+.accordion__icon {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: 1px solid $color-accent;
+  outline-offset: -1px;
+  transition: background-color $trans-default;
+
+  @include vp-768 {
+    top: 50%;
+    transform: translateY(-50%);
+    // top: 26px;
+    width: 30px;
+    height: 30px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-accent;
+    transition: background-color $trans-default;
+
+    @include vp-768 {
+      width: 14px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    background-color: $color-accent;
+    transition: background-color $trans-default;
+
+    @include vp-768 {
+      width: 14px;
+    }
+  }
+}
+
+.accordion__button--two-line .accordion__icon {
+  @media (min-width: 768px) and (max-width: 806px) {
+    top: 27px;
+  }
+}
+
+.accordion__button {
+  position: relative;
+  display: inline-flex;
+  padding: 33px 80px 32px 0;
+  width: 100%;
+  font-family: $ff-placeholder;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  background-color: $color-transparent;
+  border: none;
+  cursor: pointer;
+
+  @include vp-1366 {
+    padding: 35px 130px 32px 0;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @include vp-768 {
+    padding: 22px 52px 21px 0;
+    font-size: 20px;
+    line-height: 20px;
+
+    &--transfer {
+      padding-right: 75px;
+    }
+  }
+
+  &--two-line {
+    @media (min-width: 768px) and (max-width: 806px) {
+      padding: 27px 130px 23px 0;
+    }
+  }
+
+  @include hover-focus {
+    &:hover:not(.focus-visible) .accordion__icon {
+      background-color: $color-accent;
+      outline: none;
+    }
+
+    &.focus-visible:focus .accordion__icon {
+      background-color: $color-accent;
+      outline: none;
+    }
+
+    &:hover:not(.focus-visible) .accordion__icon::before,
+    &:hover:not(.focus-visible) .accordion__icon::after {
+      background-color: $color-default-white;
+    }
+
+    &.focus-visible:focus .accordion__icon::before,
+    &.focus-visible:focus .accordion__icon::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include active {
+    &:active:not(.focus-visible) .accordion__icon {
+      background-color: $color-btn-ac-pressed;
+      outline: none;
+    }
+
+    &:active:not(.focus-visible) .accordion__icon::before,
+    &:active:not(.focus-visible) .accordion__icon::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include disabled {
+    opacity: 0.3;
+  }
+}
+
+.accordion__element.is-active {
+  & .accordion__button {
+    padding-bottom: 11px;
+
+    @include vp-768 {
+      padding-bottom: 19px;
+    }
+  }
+
+  & .accordion__icon {
+    background-color: $color-accent;
+  }
+
+  & .accordion__icon::before {
+    background-color: $color-default-white;
+  }
+
+  & .accordion__icon::after {
+    content: none;
+  }
+}
+
+.accordion__wrapper {
+  padding-bottom: 25px;
+  max-width: 660px;
+
+  @include vp-1366 {
+    padding-bottom: 23px;
+    max-width: 558px;
+  }
+
+  @include vp-768 {
+    padding-bottom: 21px;
+    max-width: 278px;
+  }
+}
+
+.accordion__wrapper p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include vp-768 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

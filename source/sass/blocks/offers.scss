@@ -6,7 +6,8 @@
   }
 
   @include vp-768 {
-    padding-block: 72px;
+    padding-top: 72px;
+    padding-bottom: 70px;
   }
 }
 
@@ -181,11 +182,9 @@
     }
   }
 
-  @include active-not-disabled {
-    &:active:not(.focus-visible):not(:disabled) {
-      color: $color-default-white;
-      border-color: $color-default-white;
-    }
+  @include active {
+    color: $color-default-white;
+    border-color: $color-default-white;
   }
 
   @include disabled {
@@ -198,7 +197,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    background-color: #6794ec;
+    background-color: #759dee;
   }
 }
 
@@ -278,7 +277,6 @@
 
   @include vp-768 {
     margin-inline: 15px;
-    // padding-right: 3px;
     font-size: 14px;
     line-height: 22px;
     text-align: center;
@@ -324,11 +322,9 @@
     }
   }
 
-  @include active-not-disabled {
-    &:active:not(.focus-visible):not(:disabled) {
-      color: $color-text;
-      border-color: $color-text;
-    }
+  @include active {
+    color: $color-text;
+    border-color: $color-text;
   }
 
   @include disabled {

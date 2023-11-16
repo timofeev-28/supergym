@@ -297,6 +297,12 @@
   }
 }
 
+.price__item--full-day .price__subtitle {
+  @include vp-1366 {
+    transform: translateY(-2px);
+  }
+}
+
 .price__lessons {
   display: inline-block;
   margin-bottom: 68px;
@@ -312,6 +318,18 @@
     margin-bottom: 62px;
     font-size: 14px;
     line-height: 22px;
+  }
+}
+
+.price__item--full-day .price__lessons {
+  @include vp-768 {
+    transform: translateY(2px);
+  }
+}
+
+.price__item--highlighted .price__lessons {
+  @include vp-1366 {
+    padding-right: 2px;
   }
 }
 

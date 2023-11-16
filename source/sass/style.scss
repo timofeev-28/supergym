@@ -4,15 +4,13 @@
 @import "vendor/normalize";
 // Swiper 8.4.7
 @import "vendor/swiper";
-@import "vendor/data-tabs";
-@import "vendor/tabs";
-@import "vendor/data-accordion";
-@import "vendor/accordion";
-
+@import "vendor/liga-a/data-tabs";
+@import "vendor/liga-a/data-accordion";
 
 // Global
 // ---------------------------------
 
+// @import "variables";
 @import "variables";
 @import "mixins";
 @import "global/fonts";
@@ -38,6 +36,9 @@
 @import "blocks/features";
 @import "blocks/offers";
 @import "blocks/faq";
+@import "blocks/tabs";
+@import "blocks/accordion";
+@import "blocks/reviews";
 
 // ---------------------------------
 
