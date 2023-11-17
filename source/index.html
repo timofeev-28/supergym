@@ -749,20 +749,22 @@
           <section class="lesson">
             <div class="lesson__container">
               <h2 class="lesson__title title title--white">Бесплатное занятие</h2>
-              <div class="form" data-form-node  data-form-validate data-callback="base">
+              <div class="form" data-form-node data-form-validate data-callback="base">
                 <form action="https://echo.htmlacademy.ru/" method="post">
                   <div class="lesson__inputs-wrapper">
+
                     <div class="name-wrapper" data-validate-type="text" data-limitation="name"
-                      data-message-base="Обязательно к заполнению" data-message-extra="Более одной буквы"
-                      data-on-input-validate data-required>
-                      <input class="form-field" type="text" name="name" placeholder="Имя" aria-label="Имя" required>
+                      data-message-base="Обязательно к заполнению" data-required data-on-input-validate>
+                      <input class="form-field" type="text" name="name" placeholder="Имя" aria-label="Имя" required autocomplete="off">
                     </div>
-                    <div class="phone-wrapper" data-validate-type="phone" data-on-input-validate
-                      data-message-base="Обязательно к заполнению" data-message-extra="Введите 10 цифр" data-required>
-                      <input class="form-field" type="text" name="phone" placeholder="Телефон" aria-label="Телефон" required>
+
+                    <div class="phone-wrapper" data-validate-type="phone"
+                      data-message-base="Обязательно к заполнению" data-message-extra="Введите 10 цифр" data-required data-on-input-validate>
+                      <input class="form-field" type="text" name="phone" placeholder="Телефон" aria-label="Телефон" required autocomplete="off">
                     </div>
+
                   </div>
-                  <button class="lesson__btn btn btn--white-border btn--inverse btn--stretch" type="submit">Отправить</button>
+                  <button class="lesson__btn btn btn--white-border" type="submit">Отправить</button>
                 </form>
               </div>
             </div>
