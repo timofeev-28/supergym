@@ -212,20 +212,7 @@
 }
 
 .about__wrap-video iframe {
-  display: none;
-  width: 364px;
-  height: 228px;
-  border: none;
-
-  @include vp-1366 {
-    width: 265px;
-    height: 167px;
-  }
-
-  @include vp-768 {
-    width: 100vw;
-    height: 167px;
-  }
+  position: absolute;
 }
 
 .about__wrap-video button {
