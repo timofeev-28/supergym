@@ -376,3 +376,9 @@
     transform: translateY(2px);
   }
 }
+
+.features__item--space p {
+  @include vp-768 {
+    margin-inline: 64px;
+  }
+}

@@ -1,10 +1,20 @@
 .reviews {
-  padding-block: 120px;
+  padding-block: 119px;
+
+  @include vp-1366 {
+    padding-top: 101px;
+    padding-bottom: 99px;
+  }
+
+  @include vp-768 {
+    padding-top: 70px;
+    padding-bottom: 99px;
+  }
 }
 
 .reviews__container h2 {
   margin-top: 0;
-  margin-bottom: 46px;
+  margin-bottom: 47px;
   font-family: $ff-alumni;
   font-size: 54px;
   font-weight: 600;
@@ -14,14 +24,185 @@
   color: $color-text;
 
   @include vp-1366 {
+    margin-bottom: 41px;
     font-size: 42px;
     line-height: 42px;
     letter-spacing: 1.26px;
   }
 
   @include vp-768 {
+    margin-bottom: 45px;
     font-size: 32px;
     line-height: 32px;
     letter-spacing: 0.96px;
+  }
+}
+
+.reviews__swiper-wrapper {
+  position: relative;
+}
+
+.reviews__buttons-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 712px;
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1366 {
+    width: 718px;
+  }
+
+  @include vp-768 {
+    width: 316px;
+  }
+}
+
+.reviews__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  background-color: $color-transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 50%;
+  transition: background-color $trans-default, border-color $trans-default;
+
+  @include vp-768 {
+    width: 42px;
+    height: 42px;
+  }
+
+  &--next {
+    transform: rotate(180deg);
+
+    @include vp-768 {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include hover-focus {
+    border-color: $color-text;
+    outline: none;
+  }
+
+  @include active {
+    background-color: $color-text;
+
+    &:active svg {
+      color: $color-default-white;
+    }
+  }
+}
+
+.reviews__swiper {
+  width: 560px;
+
+  @include vp-1366 {
+    width: 580px;
+  }
+
+  @include vp-768 {
+    width: 226px;
+  }
+}
+
+.reviews__slides-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.reviews__slide {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 30px;
+  padding: 60px;
+  min-height: 259px;
+  background-color: $color-accent;
+
+  @include vp-1366 {
+    padding: 60px 65px;
+    min-height: 249px;
+  }
+
+  @include vp-768 {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 30px 25px;
+    min-height: 328px;
+  }
+}
+
+.reviews__image-wrapper {
+  @include vp-768 {
+    justify-self: center;
+  }
+}
+
+.reviews__image-wrapper img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  @include vp-768 {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+.reviews__text-content {
+  margin: 0;
+
+  @include vp-768 {
+    text-align: center;
+  }
+}
+
+.reviews__text-content cite {
+  display: inline-block;
+  margin-bottom: 22px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 20px;
+  font-style: normal;
+  letter-spacing: normal;
+  color: $color-default-white;
+
+  @include vp-1366 {
+    margin-bottom: 13px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 17px;
+    font-size: 18px;
+  }
+}
+
+.reviews__text-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-default-white;
+
+  @include vp-768 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.reviews__button svg {
+  color: $color-text;
+  transition: color $trans-default;
+
+  @include vp-768 {
+    width: 12px;
+    height: 21px;
   }
 }

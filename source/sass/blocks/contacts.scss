@@ -1,0 +1,42 @@
+.contacts {
+  padding: 60px 163px 61px 120px;
+  border-top: 1px solid #74819c;
+}
+
+.contacts__title {
+  margin-bottom: 41px;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__list {
+  position: relative;
+  display: grid;
+  grid-template-columns: 200px 180px;
+  row-gap: 14px;
+  column-gap: 90px;
+  margin: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 220px;
+    width: 1px;
+    height: 100%;
+    background-color: #74819c;
+  }
+}
+
+.contacts__label {
+  margin-bottom: 6px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.contacts__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+}

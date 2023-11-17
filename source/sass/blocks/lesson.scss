@@ -1,0 +1,23 @@
+.lesson {
+  padding: 60px 170px 58px 103px;
+  background-color: $color-text;
+}
+
+.lesson__container {
+  width: 410px;
+}
+
+.lesson__title {
+  margin-bottom: 23px;
+}
+
+.lesson__inputs-wrapper {
+  display: grid;
+  grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+  gap: 30px;
+  margin-bottom: 38px;
+}
+
+.lesson__btn {
+  width: 100%;
+}

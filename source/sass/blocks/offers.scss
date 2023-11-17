@@ -69,8 +69,8 @@
 
   @include vp-768 {
     grid-column: span 1;
-    justify-self: unset;
     grid-template-columns: 1fr;
+    width: 290px;
   }
 }
 
@@ -194,10 +194,10 @@
 
 .offers__wrap-img {
   @include vp-768 {
-    display: flex;
-    justify-content: center;
+    align-self: center;
+    // display: flex;
+    // justify-content: center;
     margin-bottom: 10px;
-    background-color: #759dee;
   }
 }
 

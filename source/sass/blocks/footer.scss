@@ -1,0 +1,76 @@
+.footer__wrapper-lesson-contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 337px;
+}
+
+.footer {
+  color: $color-default-white;
+  background-color: $color-bgc-footer;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 25px;
+  padding-top: 41px;
+  padding-bottom: 40px;
+}
+
+.footer__navigation-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 41px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__link {
+  position: relative;
+  display: inline;
+  padding-block: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-default-white;
+  border-bottom: 1px solid $color-transparent;
+  transition: border $trans-default;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -10px;
+    bottom: -1px;
+    left: -10px;
+    border: 1px solid $color-transparent;
+    transition: border $trans-default;
+  }
+
+  @include focus {
+    &.focus-visible:focus:not(:disabled)::after {
+      border-color: $color-default-white;
+    }
+
+    outline: none;
+  }
+
+  @include hover {
+    border-bottom-color: $color-default-white;
+  }
+
+  @include active {
+    &:active:not(.focus-visible):not(:disabled)::after {
+      border-color: $color-transparent;
+    }
+
+    border-bottom-color: $color-transparent;
+  }
+
+  @include disabled {
+    opacity: 0.4;
+  }
+}

@@ -3,7 +3,8 @@
   background-color: $color-bcg-section;
 
   @include vp-1366 {
-    padding-block: 102px;
+    padding-top: 102px;
+    padding-bottom: 99px;
   }
 
   @include vp-768 {

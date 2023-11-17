@@ -1,0 +1,61 @@
+.form-field {
+  padding: 9px 0 2px;
+  font-family: $ff-placeholder;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-default-white;
+  background-color: $color-text;
+  border: 2px solid $color-transparent;
+  border-bottom-color: rgba($color-default-white, 0.5);
+  width: 100%;
+  transition: border-color $trans-default;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  @include vp-1366 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include vp-768 {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  @include focus {
+    padding-left: 4px;
+    padding-right: 4px;
+    border-color: $color-default-white;
+    outline: none;
+  }
+
+  @include hover {
+    border-bottom-color: $color-default-white;
+  }
+
+  @include active {
+    padding-left: 4px;
+    padding-right: 4px;
+    border-color: $color-default-white;
+    outline: none;
+  }
+
+  &:focus-visible::placeholder {
+    color: transparent;
+  }
+
+  @include disabled {
+    opacity: 0.4;
+  }
+}
+
+.is-invalid .form-field:not(:disabled) {
+  border-bottom-color: $color-form-error;
+}
+
+.input-message.is-invalid {
+  color: $color-form-error;
+}

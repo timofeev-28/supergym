@@ -127,21 +127,6 @@
   }
 
   @include vp-1366 {
-    // @include active {
-    //   &:active:not(.focus-visible) .jury__info {
-    //     opacity: 1;
-    //     transform: none;
-    //   }
-
-    //   &:active:not(.focus-visible) h3 {
-    //     opacity: 0;
-    //   }
-
-    //   &:active:not(.focus-visible)::before {
-    //     opacity: 1;
-    //   }
-    // }
-
     &.is-active::before {
       opacity: 1;
     }
@@ -237,8 +222,8 @@
 
   @include vp-768 {
     top: 50%;
-    width: 47px;
-    height: 47px;
+    width: 42px;
+    height: 42px;
   }
 
   &--prev {
@@ -246,7 +231,7 @@
     transform: translateY(-50%);
 
     @include vp-768 {
-      left: -48px;
+      left: -45px;
       transform: translateY(-50%);
     }
   }
@@ -256,7 +241,7 @@
     transform: rotate(180deg) translateY(52%);
 
     @include vp-768 {
-      right: -48px;
+      right: -45px;
       transform: rotate(180deg) translateY(49%);
     }
   }
