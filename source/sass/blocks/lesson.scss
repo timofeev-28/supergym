@@ -1,14 +1,36 @@
 .lesson {
   padding: 60px 170px 58px 103px;
   background-color: $color-text;
+
+  @include vp-1366 {
+    padding: 102px 85px 99px 85px;
+  }
+
+  @include vp-768 {
+    padding: 71px 15px 70px 15px;
+  }
 }
 
 .lesson__container {
+  margin-left: auto;
   width: 410px;
+
+  @include vp-1366 {
+    margin-inline: auto;
+    width: 502px;
+  }
+
+  @include vp-768 {
+    width: 290px;
+  }
 }
 
 .lesson__title {
   margin-bottom: 23px;
+
+  @include vp-768 {
+    margin-bottom: 29px;
+  }
 }
 
 .lesson__inputs-wrapper {
@@ -16,8 +38,28 @@
   grid-template-columns: calc(50% - 15px) calc(50% - 15px);
   gap: 30px;
   margin-bottom: 38px;
+
+  @include vp-1366 {
+    grid-template-columns: calc(50% - 30px) calc(50% - 30px);
+    gap: 60px;
+    margin-bottom: 29px;
+  }
+
+  @include vp-768 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 39px;
+  }
 }
 
 .lesson__btn {
   width: 100%;
+
+  @include vp-1366 {
+    width: 502px;
+  }
+
+  @include vp-1366 {
+    width: 100%;
+  }
 }

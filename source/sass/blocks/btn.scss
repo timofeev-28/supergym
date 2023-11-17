@@ -12,6 +12,7 @@
   text-transform: uppercase;
   background-color: $color-transparent;
   cursor: pointer;
+  user-select: none;
   transition: color $trans-default, background-color $trans-default;
 
   @include vp-1366 {

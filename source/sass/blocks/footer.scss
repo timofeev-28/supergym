@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 337px;
+
+  @include vp-1366 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer {
@@ -15,6 +19,35 @@
   gap: 25px;
   padding-top: 41px;
   padding-bottom: 40px;
+
+  @include vp-1366 {
+    grid-template-columns: 120px 1fr 120px;
+    gap: 23px;
+    padding-top: 47px;
+    padding-bottom: 43px;
+  }
+
+  @include vp-768 {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+}
+
+.footer__logo img {
+  width: 107px;
+  height: 24px;
+
+  @include vp-1366 {
+    width: 100px;
+    height: 22px;
+  }
+
+  @include vp-768 {
+    width: 90px;
+    height: 16px;
+  }
 }
 
 .footer__navigation-list {
@@ -26,6 +59,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include vp-1366 {
+    column-gap: 30px;
+  }
+
+  @include vp-768 {
+    column-gap: 35px;
+    row-gap: 15px;
+    justify-content: flex-start;
+  }
 }
 
 .footer__link {
@@ -38,6 +81,10 @@
   color: $color-default-white;
   border-bottom: 1px solid $color-transparent;
   transition: border $trans-default;
+
+  @include vp-768 {
+    line-height: 20px;
+  }
 
   &::after {
     content: "";

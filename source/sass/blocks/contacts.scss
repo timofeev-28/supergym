@@ -1,10 +1,29 @@
 .contacts {
-  padding: 60px 163px 61px 120px;
+  padding: 60px 105px 61px 120px;
   border-top: 1px solid #74819c;
+
+  @include vp-1366 {
+    padding: 105px 85px 98px 85px;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include vp-768 {
+    padding: 67px 15px 57px 15px;
+  }
 }
 
 .contacts__title {
   margin-bottom: 41px;
+
+  @include vp-1366 {
+    align-self: flex-start;
+  }
+
+  @include vp-1366 {
+    margin-bottom: 37px;
+  }
 }
 
 .contacts__address {
@@ -14,10 +33,22 @@
 .contacts__list {
   position: relative;
   display: grid;
-  grid-template-columns: 200px 180px;
+  grid-template-columns: 200px 160px;
   row-gap: 14px;
   column-gap: 90px;
   margin: 0;
+
+  @include vp-1366 {
+    grid-template-columns: 230px 190px;
+    row-gap: 28px;
+    column-gap: 80px;
+  }
+
+  @include vp-768 {
+    grid-template-columns: 290px;
+    row-gap: 15px;
+    column-gap: 0;
+  }
 
   &::after {
     content: "";
@@ -26,6 +57,34 @@
     width: 1px;
     height: 100%;
     background-color: #74819c;
+
+    @include vp-1366 {
+      left: 250px;
+    }
+
+    @include vp-768 {
+      content: none;
+    }
+  }
+}
+
+.contacts__item {
+  &--order-3 {
+    @include vp-768 {
+      order: 3;
+    }
+  }
+
+  &--order-2 {
+    @include vp-768 {
+      order: 2;
+    }
+  }
+
+  &--order-4 {
+    @include vp-768 {
+      order: 4;
+    }
   }
 }
 
@@ -33,10 +92,28 @@
   margin-bottom: 6px;
   font-size: 24px;
   line-height: 24px;
+
+  @include vp-1366 {
+    margin-bottom: 11px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 13px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .contacts__text {
   margin: 0;
   font-size: 14px;
   line-height: 22px;
+
+  @include vp-768 {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
