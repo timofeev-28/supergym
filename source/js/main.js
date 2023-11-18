@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
-import {initVideo} from './modules/init/video';
+import {initVideo} from './modules/init/init-video';
 import {initPrices} from './modules/init/init-price';
 import {initSliders} from './modules/init/init-sliders';
 import {initJuryActive} from './modules/init/init-jury-active';

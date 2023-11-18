@@ -30,7 +30,6 @@
             <a class="header__link" href="tel:88005555555">8-800-555-55-55</a>
           </div>
         </header>
-
         <section class="hero">
           <div class="container hero__container">
             <ul class="hero__list">
@@ -42,16 +41,15 @@
             <a class="hero__link btn btn--white-border" href="#price">Купить абонемент</a>
             <div class="hero__image">
               <picture>
-                <source type="image/webp" media="(max-width: 1365px)" srcset="img/hero-tablet@1x.webp 1x, img/hero-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x">
-                <source media="(max-width: 1365px)" srcset="img/hero-tablet@1x.jpg 1x, img/hero-tablet@2x.jpg 2x">
-                <img src="img/hero-desktop@1x.jpg" srcset="img/hero-desktop@2x.jpg 2x" width="500" height="524" alt="Мужчина красивого спортивного телосложения в футболке">
+                <source type="image/webp" media="(max-width: 1365px)" srcset="img/hero/hero-tablet@1x.webp 1x, img/hero/hero-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/hero/hero-desktop@1x.webp 1x, img/hero/hero-desktop@2x.webp 2x">
+                <source media="(max-width: 1365px)" srcset="img/hero/hero-tablet@1x.jpg 1x, img/hero/hero-tablet@2x.jpg 2x">
+                <img src="img/hero/hero-desktop@1x.jpg" srcset="img/hero/hero-desktop@2x.jpg 2x" width="500" height="524" alt="Мужчина красивого спортивного телосложения в футболке">
               </picture>
             </div>
           </div>
         </section>
       </div>
-
       <main>
         <section class="about container" data-test="about">
           <div class="about__wrap">
@@ -71,18 +69,6 @@
                 <img src="img/about/about-desktop@1x.jpg" srcset="img/about/about-desktop@2x.jpg 2x" width="660" height="401" alt="Светлый и просторный тренажёрный зал со множеством различных тренажёров">
               </picture>
             </div>
-
-          <!--  <div class="gym__video" data-video>
-              <button class="play-button" type="button" aria-label="Начать просмотр видеоролика">
-              </button>
-              <picture>
-                <source type="image/webp" media="(min-width: 1366px)" srcset="img/video-mobile-tablet.webp 1x, img/video-mobile-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x" width="364" height="228">
-                <source media="(max-width: 1365px)" srcset="img/video-mobile-tablet.jpg 1x, img/video-mobile-tablet@2x.jpg 2x">
-                <img src="img/video-desktop.jpg" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x" width="364" height="228" alt="">
-              </picture>
-            </div>  -->
-
             <div class="about__wrap-video" data-video>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/about/about-poster-mobile@1x.webp 1x, img/about/about-poster-mobile@2x.webp 2x">
@@ -92,7 +78,6 @@
                 <source type="image/jpeg" media="(max-width: 1365px)" srcset="img/about/about-poster-tablet@1x.jpg 1x, img/about/about-poster-tablet@2x.jpg 2x">
                 <img src="img/about/about-poster-desktop@1x.jpg" width="364" height="228" srcset="img/about/about-poster-desktop@2x.jpg 2x" alt="Постер для видео тренажерного зала">
               </picture>
-              <!--<iframe data-iframe allow="encrypted-media; allowfullscreen" width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw/?rel=0&showinfo=0&autoplay=1&amp;controls=0" title="Бесплатные интерактивные онлайн-курсы" loading="lazy"></iframe> -->
               <button type="button" aria-label="Воспроизвести видео">
                 <svg width="16" height="16" role="img">
                   <use href="img/sprite.svg#play"></use>
@@ -101,14 +86,13 @@
             </div>
           </div>
         </section>
-
         <section data-test="price" class="price" id="price">
           <div class="price__bcg-img">
             <picture>
-              <source type="image/webp" media="(max-width: 1365px)" srcset="img/plates-tablet@1x.webp 1x, img/plates-tablet@2x.webp 2x">
-              <source type="image/webp" width="287" height="494" srcset="img/plates-desktop@1x.webp 1x, img/plates-desktop@2x.webp 2x">
-              <source type="image/jpeg" media="(max-width: 1365px)" srcset="img/plates-tablet@1x.jpg 1x, img/plates-tablet@2x.jpg 2x">
-              <img src="img/plates@1x.jpg" width="287" height="494" srcset="img/plates-desktop@2x.jpg 2x" alt="">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/price/plates-tablet@1x.webp 1x, img/price/plates-tablet@2x.webp 2x">
+              <source type="image/webp" width="287" height="494" srcset="img/price/plates-desktop@1x.webp 1x, img/price/plates-desktop@2x.webp 2x">
+              <source type="image/jpeg" media="(max-width: 1365px)" srcset="img/price/plates-tablet@1x.jpg 1x, img/price/plates-tablet@2x.jpg 2x">
+              <img src="img/price/plates@1x.jpg" width="287" height="494" srcset="img/price/plates-desktop@2x.jpg 2x" alt="">
             </picture>
           </div>
           <div class="container">
@@ -164,15 +148,14 @@
             </ul>
           </div>
         </section>
-
-        <section class="games container games__container" data-test="games">
+        <section class="games container games-container" data-test="games">
           <div class="games__content-wrap">
             <div class="games__content">
               <div class="games__main-content">
                 <h2 class="games__title">Super <span>games</span></h2>
                 <dl class="games__date">
                   <dt class="games__term">Дата</dt>
-                  <dd class="games__desc">7 <span>Марта<br>2019</span></dd>
+                  <dd class="games__desc">7<span>Марта<br>2019</span></dd>
                 </dl>
                 <dl class="games__time">
                   <dt class="games__term">Время</dt>
@@ -194,7 +177,6 @@
             </picture>
           </div>
         </section>
-
         <section class="jury container">
           <h2 class="jury__title title">Жюри</h2>
           <div class="jury__wrapper">
@@ -362,7 +344,6 @@
             </div>
           </div>
         </section>
-
         <section class="features" data-test="features">
           <div class="container">
             <div class="features__wrapper">
@@ -417,7 +398,6 @@
             </div>
           </div>
         </section>
-
         <section class="offers container" data-test="offers">
           <div class="offers__wrapper">
             <h2>Акции</h2>
@@ -453,7 +433,6 @@
             </ul>
           </div>
         </section>
-
         <section class="faq" data-test="faq">
           <div class="faq__container container">
             <h2>Вопросы и ответы</h2>
@@ -516,7 +495,6 @@
                     </div>
                   </div>
                 </div>
-
                 <!-- tab: Абонемент -->
                 <div class="tabs__element" data-tabs="element">
                   <div class="accordion" data-accordion="parent">
@@ -568,7 +546,6 @@
                     </div>
                   </div>
                 </div>
-
                 <!-- tab: Услуги -->
                 <div class="tabs__element" data-tabs="element">
                   <div class="accordion" data-accordion="parent">
@@ -620,7 +597,6 @@
                     </div>
                   </div>
                 </div>
-
                 <!-- tab: Правила -->
                 <div class="tabs__element" data-tabs="element">
                   <div class="accordion" data-accordion="parent">
@@ -676,8 +652,7 @@
             </div>
           </div>
         </section>
-
-        <section class="reviews reviews__container container" data-test="reviews">
+        <section class="reviews container" data-test="reviews">
           <h2>Отзывы</h2>
           <div class="reviews__swiper-wrapper">
             <div class="reviews__buttons-wrapper">
@@ -756,7 +731,7 @@
         </section>
       </main>
       <footer data-test="footer">
-        <div class="footer__wrapper-lesson-contacts">
+        <div class="footer-wrapper">
           <!-- lesson -->
           <section class="lesson">
             <div class="lesson__container">
@@ -812,7 +787,6 @@
             </div>
           </section>
         </div>
-
         <div class="footer">
           <div class="footer__container container">
             <a class="footer__logo" href="index.html">
@@ -868,7 +842,6 @@
         </div>
       </footer>
     </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
