@@ -6,7 +6,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  transform: translateY(-2px);
+
+  @include vp-1366 {
+    transform: translateY(-2px);
+  }
 
   @include vp-768 {
     justify-content: center;

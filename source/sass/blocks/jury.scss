@@ -30,7 +30,7 @@
 
 .jury__title {
   margin-top: 0;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
   line-height: 1.2;
 
   @include vp-1366 {
@@ -81,6 +81,11 @@
   @include vp-1366 {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @include vp-768 {
+    font-size: 22px;
+    line-height: 22px;
   }
 }
 

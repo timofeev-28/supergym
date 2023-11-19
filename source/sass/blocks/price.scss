@@ -18,7 +18,7 @@
 .price__bcg-img {
   position: absolute;
   right: 0;
-  bottom: -143px;
+  bottom: -144px;
 
   @include vp-1366 {
     bottom: -147px;
@@ -50,7 +50,7 @@
   }
 
   @include vp-768 {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
 }
 
@@ -173,6 +173,7 @@
 
   @include vp-1366 {
     min-height: 56px;
+    padding-top: 12px;
   }
 
   // фон для кнопки так сделан для возможности использовать transition
@@ -266,6 +267,14 @@
   &--highlighted {
     border-color: $color-transparent;
 
+    @include vp-1366 {
+      padding-top: 61px;
+    }
+
+    @include vp-768 {
+      padding-top: 45px;
+    }
+
     .price__link {
       color: $color-default-white;
       border-color: $color-transparent;
@@ -301,7 +310,8 @@
 
 .price__item--full-day .price__subtitle {
   @include vp-1366 {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
+    margin-bottom: 17px;
   }
 }
 
@@ -324,7 +334,12 @@
 }
 
 .price__item--full-day .price__lessons {
+  @include vp-1366 {
+    margin-bottom: 72px;
+  }
+
   @include vp-768 {
+    margin-bottom: 61px;
     transform: translateY(2px);
   }
 }

@@ -21,8 +21,9 @@
     align-self: flex-start;
   }
 
-  @include vp-1366 {
+  @include vp-768 {
     margin-bottom: 37px;
+    letter-spacing: 0.96px;
   }
 }
 

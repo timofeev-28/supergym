@@ -17,7 +17,7 @@
   display: grid;
   grid-template-columns: 200px 1fr 200px;
   gap: 25px;
-  padding-top: 41px;
+  padding-top: 40px;
   padding-bottom: 40px;
 
   @include vp-1366 {
@@ -81,10 +81,6 @@
   color: $color-default-white;
   border-bottom: 1px solid $color-transparent;
   transition: border $trans-default;
-
-  @include vp-768 {
-    line-height: 20px;
-  }
 
   &::after {
     content: "";
