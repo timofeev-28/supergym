@@ -251,11 +251,6 @@
 .features__accent-content {
   align-self: start;
   width: min-content;
-  background: var(--linear-gradient);
-  background-clip: text;
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 
   @include vp-1366 {
     align-self: center;
@@ -266,23 +261,6 @@
     flex-direction: column;
     align-items: center;
   }
-
-
-  &--space {
-    --linear-gradient: linear-gradient(128deg, #d10a42 0%, #0041ca 45.58%);
-  }
-
-  &--parking {
-    --linear-gradient: linear-gradient(142deg, #d10a42 0%, #0041ca 88.2%);
-  }
-
-  &--comfort {
-    --linear-gradient: linear-gradient(142deg, #d10a42 0%, #0041ca 88.2%);
-  }
-
-  &--experience {
-    --linear-gradient: linear-gradient(143deg, #d10a42 0%, #0041ca 87.33%);
-  }
 }
 
 .features__accent-content span {
@@ -290,14 +268,36 @@
 }
 
 .features__accent-content span:first-child {
+  display: inline-block;
   font-size: 70px;
   font-weight: 700;
   line-height: 70px;
+  background: var(--linear-gradient);
+  background-clip: text;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   @include vp-768 {
     font-size: 64px;
     line-height: 64px;
   }
+}
+
+.features__accent-content--space span:first-child {
+  --linear-gradient: linear-gradient(128deg, #d10a42 0%, #0041ca 45.58%);
+}
+
+.features__accent-content--parking span:first-child {
+  --linear-gradient: linear-gradient(142deg, #d10a42 0%, #0041ca 88.2%);
+}
+
+.features__accent-content--comfort span:first-child {
+  --linear-gradient: linear-gradient(142deg, #d10a42 0%, #0041ca 88.2%);
+}
+
+.features__accent-content--experience span:first-child {
+  --linear-gradient: linear-gradient(143deg, #d10a42 0%, #0041ca 87.33%);
 }
 
 .features__accent-content span:last-child {
@@ -306,7 +306,6 @@
   line-height: 22px;
 
   @include vp-768 {
-    font-size: 13px;
     line-height: 20px;
   }
 }

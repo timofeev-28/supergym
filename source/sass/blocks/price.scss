@@ -89,10 +89,10 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
-  color: $color-text;
+  color: rgba(16, 38, 84, 0.5);
   background-color: $color-transparent;
   border: none;
-  opacity: 0.5;
+  // opacity: 0.5;
   transition: color $trans-default, opacity $trans-default;
   user-select: none;
 
@@ -109,7 +109,7 @@
 
   @include hover-focus {
     color: $color-accent-btn;
-    opacity: 1;
+    // opacity: 1;
     outline: none;
   }
 
@@ -137,7 +137,7 @@
 }
 
 .price__control.is-active {
-  opacity: 1;
+  color: $color-text;
 
   &::after {
     transform: scaleX(1);
