@@ -5,7 +5,8 @@
   z-index: 1;
 
   @include vp-1366 {
-    padding-block: 100px;
+    padding-top: 101px;
+    padding-bottom: 100px;
   }
 
   @include vp-768 {
@@ -45,6 +46,7 @@
 
   @include vp-1366 {
     margin-bottom: 25px;
+    transform: none;
   }
 
   @include vp-768 {
@@ -55,7 +57,7 @@
 .price__list-controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 51px;
   margin-top: 0;
   margin-inline: auto;
   margin-bottom: 36px;
@@ -285,7 +287,7 @@
   color: $color-text;
 
   @include vp-1366 {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     font-size: 24px;
     line-height: 24px;
   }
@@ -311,7 +313,7 @@
   color: $color-text;
 
   @include vp-1366 {
-    margin-bottom: 73px;
+    margin-bottom: 74px;
   }
 
   @include vp-768 {
@@ -344,14 +346,15 @@
   display: inline-block;
   margin-top: 0;
   margin-bottom: 35px;
-  padding-right: 12px;
+  padding-right: 11px;
   font-size: 60px;
   font-weight: 700;
   line-height: 150%;
   color: $color-accent-btn;
 
   @include vp-1366 {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+    padding-right: 12px;
   }
 
   @include vp-768 {

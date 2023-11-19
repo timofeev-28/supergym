@@ -77,6 +77,11 @@
   line-height: 22px;
   color: $color-default-white;
   transition: opacity $trans-default;
+
+  @include vp-1366 {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .jury__item {

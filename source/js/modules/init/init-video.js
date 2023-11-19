@@ -16,7 +16,7 @@ function initVideo() {
 }
 
 function createIframe() {
-  let iframe = document.createElement('iframe');
+  const iframe = document.createElement('iframe');
 
   iframe.setAttribute('allow', 'autoplay; encrypted-media; allowfullscreen');
   iframe.setAttribute('width', '100%');
