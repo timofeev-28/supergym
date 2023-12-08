@@ -1,9 +1,11 @@
+import Swiper from '../../vendor/swiper';
+
 const sliderJury = document.querySelector('[data-swiper="jury"]');
 const buttonNext = document.querySelector('[data-button="jury-next"]');
 const buttonPrev = document.querySelector('[data-button="jury-prev"]');
 
 const setSliderJury = () => {
-  return new window.Swiper(sliderJury, {
+  const swiperJury = new Swiper(sliderJury, {
     loop: true,
     speed: 700,
 
@@ -34,6 +36,8 @@ const setSliderJury = () => {
       },
     },
   });
+
+  return swiperJury;
 };
 
 const initJurySlider = () => {

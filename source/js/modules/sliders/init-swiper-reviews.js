@@ -19,7 +19,9 @@ const initReviewsSlider = () => {
     return null;
   }
 
-  return new Swiper(sliderReviews, reviewsSliderOptions);
+  const swiperReviews = new Swiper(sliderReviews, reviewsSliderOptions);
+
+  return swiperReviews;
 };
 
 export {initReviewsSlider};
